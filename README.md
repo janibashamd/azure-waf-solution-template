@@ -49,17 +49,6 @@ Therefore, these three components form a complete WAF solution that is easy to d
    * AZURE_PWD --> Azure client password
    * RUNNER_PATH --> github runner path ???
 * Add your resource group and other params under Lib/azure-user-params file as below.
-Param Name	Mandatory	Optional	Default
-cftName	No	Yes	azure-cft
-location_name	No	Yes	eastus
-dashboard_name	No	Yes	Dashboard-NAP-CFT
-virnetworkId	No	Yes	user-vnet-cft4
-workspaceName	No	Yes	user-cft-workspace
-adminUsername	No	Yes	demouser
-adminPassword	No	Yes	Demouser1234
-resourceGroup	Yes	No	-
-tenandId	Yes	No	-
-subscriptionId	Yes	No	-
 ![image](https://user-images.githubusercontent.com/6093830/177365614-fb285a8a-189c-4cb3-a9be-4b55dc5d2b8a.png)
 
 
