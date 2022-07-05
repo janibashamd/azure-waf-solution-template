@@ -40,37 +40,34 @@ Therefore, these three components form a complete WAF solution that is easy to d
 ## How to Run:
 
 * Pre-requisites:
-  * you should have the admin privillages to your azure resource group.
-  * Login to azure portal (portal.azure.com)
-  * Create the service principle through Az Cli. (how to create the service principle (https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli))
-  * create resource group, workspace and vnet for the required location
+  * Azure account and credentials
+  * Admin privileges to your azure resource group
+  * Service principal and password (follow link to create the service principal (https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli))
+  * Resource group, workspace and vnet created for the preferred location
 * Add the below Repo secrets under github settings --> Security -->secrets -->Actions 
    * AZURE_SP --> Azure service principle
    * AZURE_PWD --> Azure client password
    * RUNNER_PATH --> github runner path ???
-* Add your resource group and other params under Lib/azure-user-params file.
-S.No	Param Name	Mandatory	Optional	Default
-1	cftName	No	Yes	azure-cft
-2	location_name	No	Yes	eastus
-3	dashboard_name	No	Yes	Dashboard-NAP-CFT
-4	virnetworkId	No	Yes	user-vnet-cft4
-5	workspaceName	No	Yes	user-cft-workspace
-6	adminUsername	No	Yes	demouser
-7	adminPassword	No	Yes	Demouser1234
-8	resourceGroup	Yes	No	-
-9	tenandId	Yes	No	-
-10	subscriptionId	Yes	No	-
-![image](https://user-images.githubusercontent.com/6093830/177365188-915c7720-0f6b-42b7-a03e-ddb659869422.png)
+* Add your resource group and other params under Lib/azure-user-params file as below.
+Param Name	Mandatory	Optional	Default
+cftName	No	Yes	azure-cft
+location_name	No	Yes	eastus
+dashboard_name	No	Yes	Dashboard-NAP-CFT
+virnetworkId	No	Yes	user-vnet-cft4
+workspaceName	No	Yes	user-cft-workspace
+adminUsername	No	Yes	demouser
+adminPassword	No	Yes	Demouser1234
+resourceGroup	Yes	No	-
+tenandId	Yes	No	-
+subscriptionId	Yes	No	-
+![image](https://user-images.githubusercontent.com/6093830/177365614-fb285a8a-189c-4cb3-a9be-4b55dc5d2b8a.png)
 
-* On GitHub.com, navigate to the main page of the repository.
-* Under your repository name, click Actions.
-* In the left sidebar, click the workflow you want to run.
-* Above the list of workflow runs, select Run workflow.
-* Use the Branch dropdown to select the workflow's branch, and type the input parameters.
+
+* On GitHub.com, navigate to the main page of the repository and below repository name, click Actions tab.
+* In the left sidebar, click the workflow "loud Formation Template Deployment in Azure" you want to run.
+* Above the list of previous workflow runs, click on Run workflow drop-down.
+* Optionally you can select different branch(default is master) from available dropdown, and click on "Run Workflow" button
 
 ## Conclusion:
 
 Therefore, the use of a template to deploy a cloud WAF allows to significantly reduce time spent on WAF deployment and maintenance. Also, it gives a complete and easy-to-use solution to deploy the resources and verify the NGINX solution in Azure platform in any location. Handy interfaces for configuration and visibility turn this project into a boxed solution allowing a user to easily operate a WAF and focus on application security.
-Please comment if you find useful to have this kind of solution in major public clouds marketplaces.
-It is a community project so far, and we need as much feedback as possible to steer one properly. Feel free to give it a try and leave feedback here or at the project's git repository.
-
