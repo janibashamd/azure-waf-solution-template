@@ -53,9 +53,9 @@ Therefore, these three components form a complete WAF solution that is easy to d
 
 
 * On GitHub.com, navigate to the main page of the repository and below repository name, click Actions tab.
-* In the left sidebar, click the workflow "loud Formation Template Deployment in Azure" you want to run.
+* In the left sidebar select the workflow with name "Cloud Formation Template Deployment in Azure"
 * Above the list of previous workflow runs, click on Run workflow drop-down.
-* Optionally you can select different branch(default is master) from available dropdown, and click on "Run Workflow" button
+* Optionally you can select different branch(default is master) from available dropdown, and click on "Run Workflow" button to start executing the CICD.
 
 ## Conclusion:
 
