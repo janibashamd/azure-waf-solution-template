@@ -43,11 +43,25 @@ Therefore, these three components form a complete WAF solution that is easy to d
   * you should have the admin privillages to your azure resource group.
   * Login to azure portal (portal.azure.com)
   * Create the service principle through Az Cli. (how to create the service principle (https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli))
-* Add the below variables under github-->secrets
+  * create resource group, workspace and vnet for the required location
+* Add the below Repo secrets under github settings --> Security -->secrets -->Actions 
    * AZURE_SP --> Azure service principle
    * AZURE_PWD --> Azure client password
-   * RUNNER_PATH --> github runner path
+   * RUNNER_PATH --> github runner path ???
 * Add your resource group and other params under Lib/azure-user-params file.
+S.No	Param Name	Mandatory	Optional	Default
+1	cftName	No	Yes	azure-cft
+2	location_name	No	Yes	eastus
+3	dashboard_name	No	Yes	Dashboard-NAP-CFT
+4	virnetworkId	No	Yes	user-vnet-cft4
+5	workspaceName	No	Yes	user-cft-workspace
+6	adminUsername	No	Yes	demouser
+7	adminPassword	No	Yes	Demouser1234
+8	resourceGroup	Yes	No	-
+9	tenandId	Yes	No	-
+10	subscriptionId	Yes	No	-
+![image](https://user-images.githubusercontent.com/6093830/177365188-915c7720-0f6b-42b7-a03e-ddb659869422.png)
+
 * On GitHub.com, navigate to the main page of the repository.
 * Under your repository name, click Actions.
 * In the left sidebar, click the workflow you want to run.
